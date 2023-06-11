@@ -45,3 +45,10 @@ bool MyTableModel::setData(const QModelIndex& index, const QVariant& value, int 
     return false;
 }
 
+QVariant MyTableModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if (role == Qt::DisplayRole && orientation == Qt::Horizontal)
+        return headerDataTitle[section];
+    return QVariant();
+}
+

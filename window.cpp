@@ -9,6 +9,8 @@ Window::Window(QWidget *parent)
 {
     ui->setupUi(this);
 
+    model->setHeaderData(0,Qt::Horizontal,"Passport",Qt::EditRole);
+
 
     ui->tableView->setModel(model);
     ui->tableView->verticalHeader()->hide();
